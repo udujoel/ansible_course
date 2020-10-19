@@ -1,0 +1,11 @@
+---
+# copy text from one node to another
+
+- name: Ensure text is copied
+  hosts: localhost
+  tasks:
+    - name: copy task
+      copy:
+        src: ./ansible.txt
+        dest: ~/copied.txt
+

@@ -1,0 +1,6 @@
+
+ansible -m copy -a "src=./ansible.txt dest=~/.gitignore" localhost
+
+ansible -m homebrew -a "name=hello state=latest" localhost
+
+ansible -m homebrew -a "name=jq state=latest" localhost
