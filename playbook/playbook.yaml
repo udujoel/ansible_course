@@ -8,4 +8,7 @@
       copy:
         src: ./ansible.txt
         dest: ~/copied.txt
-
+    - name: install bat
+      homebrew:
+        name: bat
+        state: latest
