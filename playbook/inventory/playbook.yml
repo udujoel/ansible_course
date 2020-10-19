@@ -1,0 +1,37 @@
+---
+- name: play one - install vim from custom inventory
+  hosts: agents
+  become: true
+  tasks:
+  - name: apt 
+    apt:
+      name: vim
+      state: latest
+  
+  - name: zsh install
+    apt:
+      name: zsh
+      state: latest
+
+  - name: vagrant install
+    apt:
+      name: vagrant
+      state: latest
+
+  - name: nodejs install
+    apt:
+      name: nodejs
+      state: latest
+
+- name: play two server config
+  hosts: master
+  become: true
+  tasks:
+    - name: ensure Nginx is at latest
+      apt:
+        name: nginx
+        state: latest
+    - name: start server
+      service:
+        name: nginx
+        state: started
