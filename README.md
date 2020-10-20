@@ -15,7 +15,7 @@ What we’ll learn:
  -    Using custom inventory files       
  - Shutting  down VMs demo
 
-   
+   ---
 
 ### **Configuration Management**
 The purpose of configuration management is to maintain systems in a desired state. It aims to eliminate configuration drift as much as possible. 
